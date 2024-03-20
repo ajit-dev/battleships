@@ -1,0 +1,51 @@
+<p style="color: green"><%= notice %></p>
+
+<div>
+  <h2>P1 Battleground</h2>
+  <table>
+    <% @p1_grid.each do |row| %>
+      <tr>
+        <% row.each do |field| %>
+          <td>
+            <%= field.nil? ? '-' : field %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table
+</div>
+
+<div>
+  <h2>P2 Battleground</h2>
+  <table>
+    <% @p2_grid.each do |row| %>
+      <tr>
+        <% row.each do |field| %>
+          <td>
+            <%= field.nil? ? '-' : field %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table
+</div>
+
+<div>
+  <h2>P1: <%= @p2_grid.flatten.count("X") %></h2>
+  <h2>P1: <%= @p1_grid.flatten.count("X") %></h2>
+  <h2>
+    <% if @p1_grid.flatten.count("X") > @p2_grid.flatten.count("X") %>
+      Player 2 wins
+    <% elsif @p1_grid.flatten.count("X") < @p2_grid.flatten.count("X") %>
+      Player 1 wins
+    <% else %>
+      It is a draw
+    <% end %>
+  </h2>
+<div>
+
+</br>
+</br>
+<div>
+  <%= link_to "Back to games", games_path %>
+</div>

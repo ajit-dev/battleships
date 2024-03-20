@@ -1,0 +1,33 @@
+<%= form_tag '/games/result', method: :get  do |form| %>
+  <div>
+    <%= label_tag 'Grid Size:' %>
+    <%= text_field_tag 'grid_size' %>
+  </div>
+  <div>
+    <%= label_tag 'TotalShips:' %>
+    <%= text_field_tag 'total_ships' %>
+  </div>
+  <div>
+    <%= label_tag 'P1 Ship Positions:' %>
+    <%= text_field_tag 'p1_pos' %>
+  </div>
+  <div>
+    <%= label_tag 'P2 Ship Positions:' %>
+    <%= text_field_tag 'p2_pos' %>
+  </div>
+  <div>
+    <%= label_tag 'TotalMissiles:' %>
+    <%= text_field_tag 'total_missiles' %>
+  </div>
+  <div>
+    <%= label_tag 'P1 moves:' %>
+    <%= text_field_tag 'p1_movs' %>
+  </div>
+  <div>
+    <%= label_tag 'P2 moves:' %>
+    <%= text_field_tag 'p2_movs' %>
+  </div>
+  <div>
+    <%= submit_tag 'Submit' %>
+  </div>
+<% end %>
